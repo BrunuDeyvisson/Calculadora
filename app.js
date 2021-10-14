@@ -5,7 +5,15 @@ const bodyparser = require("body-parser")
 const app = express()
 const mongoose = require("mongoose")
 
+ //body-parser
+ app.use(bodyparser.urlencoded({extended: true}))
+ app.use(bodyparser.json)
+//handlebars
+ app.engine('handlebars', handlebars({defaultLayout: 'main'}))
+ app.set('view engine', 'handlebars')
+//mongoose
 
+//
 
 
 
